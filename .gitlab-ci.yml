@@ -1,7 +1,7 @@
 include:
   - template: Dependency-Scanning.gitlab-ci.yml
 
-image: edbizarro/gitlab-ci-pipeline-php:8.0-alpine
+image: registry.gitlab.com/6go-srl/docker/php:8.0
 
 cache:
   key: "${CI_COMMIT_REF_SLUG}"
@@ -23,7 +23,6 @@ composer:
 
 # Check Code Style
 phpcs:
-  image: lorisleiva/laravel-docker
   environment:
     name: testing
   artifacts:
