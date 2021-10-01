@@ -5,10 +5,10 @@ namespace Ludo237\Rules;
 use Illuminate\Contracts\Validation\Rule;
 
 /**
- * Class WithoutSpaces
+ * Class WithoutSpaceRule
  * @package Ludo237\Rules
  */
-class WithoutSpaces implements Rule
+class WithoutSpaceRule implements Rule
 {
     public function passes($attribute, $value) : bool
     {

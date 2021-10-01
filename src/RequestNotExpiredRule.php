@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Date;
  * Class NotExpired
  * @package Ludo237\Rules
  */
-class NotExpired implements Rule
+class RequestNotExpiredRule implements Rule
 {
     public function passes($attribute, $value) : bool
     {

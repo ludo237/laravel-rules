@@ -1,12 +1,11 @@
 <?php
 
-namespace Tests\Unit\Rules;
+namespace Ludo237\Rules\Tests;
 
-use Support\Rules\WithoutSpaces;
-use Tests\TestCase;
+use Ludo237\Rules\WithoutSpaceRule;
 
 /**
- * Class WithoutSpaces
+ * Class WithoutSpacesRuleTest
  * @package Tests\Unit\Rules
  * @group Rules
  */
@@ -14,29 +13,29 @@ class WithoutSpacesRuleTest extends TestCase
 {
     /**
      * @test
-     * @covers \Support\Rules\WithoutSpaces
+     * @covers \Ludo237\Rules\WithoutSpaceRule
      */
     public function a_string_passes_without_spaces()
     {
-        $rule = new WithoutSpaces();
-
+        $rule = new WithoutSpaceRule();
+        
         $this->assertTrue(
             $rule->passes("input", "avalidstring")
         );
-
+        
         $this->assertFalse(
             $rule->passes("input", "not a valid string")
         );
     }
-
+    
     /**
      * @test
-     * @covers \Support\Rules\WithoutSpaces
+     * @covers \Ludo237\Rules\WithoutSpaceRule
      */
     public function it_displays_the_right_message()
     {
-        $rule = new WithoutSpaces();
-
+        $rule = new WithoutSpaceRule();
+        
         $this->assertEquals("The attribute :attribute contains spaces", $rule->message());
     }
 }
