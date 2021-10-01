@@ -1,0 +1,56 @@
+{
+  "name": "ludo237/laravel-rules",
+  "description": "A set of custom rules that I've developed over the years and I find it useful",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Claudio Ludovico",
+      "email": "ludo237@outlook.com"
+    }
+  ],
+  "homepage": "https://github.com/ludo237/laravel-rules",
+  "keywords": [
+    "laravel",
+    "rules",
+    "custom rules",
+    "laravel-package",
+    "open-source"
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "illuminate/support": "7.x|8.x"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.13",
+    "laravel/framework": "7.x|8.x",
+    "mockery/mockery": "^1.4",
+    "nunomaduro/larastan": "^0.7",
+    "orchestra/testbench": "^6.12",
+    "phpunit/phpunit": "^9.5",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ludo237\\DelayedArtisticGuppy\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ludo237\\DelayedArtisticGuppy\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [],
+      "aliases": {}
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laravel-rules
+    container_name: lrules
+    restart: on-failure
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www:cached
+    tty: true
