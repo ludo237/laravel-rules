@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Ludo237\\DelayedArtisticGuppy\\": "src/"
+      "Ludo237\\Rules\\": "src/"
     },
     "files": [
       "src/helpers.php"
@@ -39,7 +39,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Ludo237\\DelayedArtisticGuppy\\Tests\\": "tests"
+      "Ludo237\\Rules\\Tests\\": "tests"
     }
   },
   "minimum-stability": "stable",
