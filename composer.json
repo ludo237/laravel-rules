@@ -33,9 +33,7 @@
     "psr-4": {
       "Ludo237\\Rules\\": "src/"
     },
-    "files": [
-      "src/helpers.php"
-    ]
+    "files": []
   },
   "autoload-dev": {
     "psr-4": {
