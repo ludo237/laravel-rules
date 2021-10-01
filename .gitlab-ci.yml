@@ -35,6 +35,7 @@ phpcs:
     - mkdir -p ./reports
   script:
     - phpcs --standard=PSR2 --extensions=php --report=full --report-file=./reports/$CI_COMMIT_SHA.txt -v src
+  allow_failure: true
 
 # Run analysis for standards
 phpstan:
