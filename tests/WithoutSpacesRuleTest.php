@@ -6,7 +6,7 @@ use Ludo237\Rules\WithoutSpaceRule;
 
 /**
  * Class WithoutSpacesRuleTest
- * @package Tests\Unit\Rules
+ * @package Ludo237\Rules\Tests
  * @group Rules
  */
 class WithoutSpacesRuleTest extends TestCase
