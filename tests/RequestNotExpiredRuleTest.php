@@ -17,7 +17,7 @@ class RequestNotExpiredRuleTest extends TestCase
      */
     public function a_not_expired_date_should_pass_the_validation()
     {
-        $rule = new NotExpired();
+        $rule = new RequestNotExpiredRule();
 
         $this->assertTrue(
             $rule->passes("input", Date::now()->addHour()->timestamp)
@@ -34,7 +34,7 @@ class RequestNotExpiredRuleTest extends TestCase
      */
     public function it_returns_a_valid_error_message()
     {
-        $rule = new NotExpired();
+        $rule = new RequestNotExpiredRule();
 
         $this->assertNotEmpty($rule->message());
         $this->assertIsString($rule->message());

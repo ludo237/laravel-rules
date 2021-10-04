@@ -2,7 +2,7 @@
 
 namespace Ludo237\Rules\Tests;
 
-use Ludo237\Rules\WithoutSpaceRule;
+use Ludo237\Rules\MatchPasswordRule;
 
 /**
  * Class MatchPasswordRuleTest

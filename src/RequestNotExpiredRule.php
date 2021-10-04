@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\Date;
 
 /**
- * Class NotExpired
+ * Class RequestNotExpiredRule
  * @package Ludo237\Rules
  */
 class RequestNotExpiredRule implements Rule
