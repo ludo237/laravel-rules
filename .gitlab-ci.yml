@@ -11,7 +11,6 @@ cache:
     - phpcpd.phar
     - .phpunit.result.cache
 
-# Start by creating the vendor folder for the stages
 composer:
   artifacts:
     expire_in: 1 day
@@ -21,14 +20,15 @@ composer:
     - composer config -g cache-dir "$(pwd)/.composer-cache"
     - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts -o
 
-# Check Code Style
 phpcs:
   environment:
     name: testing
+  needs: [ "composer" ]
+  dependencies:
+    - composer
   artifacts:
     paths:
       - reports
-      - ./storage/logs
     expire_in: 1 day
     when: on_failure
   before_script:
@@ -37,7 +37,6 @@ phpcs:
     - phpcs --standard=PSR2 --extensions=php --report=full --report-file=./reports/$CI_COMMIT_SHA.txt -v src
   allow_failure: true
 
-# Run analysis for standards
 phpstan:
   needs: ["composer"]
   dependencies:
@@ -45,7 +44,6 @@ phpstan:
   script:
     - ./vendor/bin/phpstan analyse --error-format gitlab
 
-# Check for any copy-paste code in the codebase
 phpcpd:
   environment:
     name: testing
@@ -54,11 +52,9 @@ phpcpd:
   script:
     - php phpcpd.phar src/ --min-lines=50
 
-# Security check on the whole dependencies tree
 security-advisories:
   environment:
     name: testing
-  needs: []
   artifacts:
     paths:
       - reports
@@ -66,15 +62,14 @@ security-advisories:
     when: on_failure
   before_script:
     - mkdir -p ./reports
-    - sudo apk add bash
+    - apk add bash
     - wget https://get.symfony.com/cli/installer -O - | bash
-    - sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+    - mv ~/.symfony/bin/symfony /usr/local/bin/symfony
   script:
     - symfony security:check
   only:
     - tags
 
-# Testing time
 unit:
   environment:
     name: testing
