@@ -41,6 +41,9 @@ phpstan:
   needs: ["composer"]
   dependencies:
     - composer
+  before_script:
+    - touch .env
+    - php artisan key:generate
   script:
     - ./vendor/bin/phpstan analyse --error-format gitlab
 
