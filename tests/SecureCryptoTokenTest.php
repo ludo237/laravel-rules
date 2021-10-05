@@ -5,7 +5,6 @@ namespace Ludo237\Rules\Tests;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 use Ludo237\Rules\SecureCryptoToken;
-use Tests\TestCase;
 
 /**
  * @group Rules

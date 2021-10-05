@@ -23,6 +23,6 @@
         </testsuite>
     </testsuites>
     <php>
-        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <env name="APP_KEY" value="base64:3TQ1ZDeQsEtv2K+/nQenwhcjxu/Kt20rxt5AS4z+9Cs="/>
     </php>
 </phpunit>
