@@ -45,6 +45,7 @@ phpstan:
     - cp .env.example .env
   script:
     - ./vendor/bin/phpstan analyse --error-format gitlab
+  allow_failure: true
 
 phpcpd:
   environment:
