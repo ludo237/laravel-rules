@@ -5,8 +5,6 @@ namespace Ludo237\Rules\Tests;
 use Ludo237\Rules\WithoutSpaceRule;
 
 /**
- * Class WithoutSpacesRuleTest
- * @package Ludo237\Rules\Tests
  * @group Rules
  */
 class WithoutSpacesRuleTest extends TestCase

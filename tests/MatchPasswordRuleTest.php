@@ -5,8 +5,6 @@ namespace Ludo237\Rules\Tests;
 use Ludo237\Rules\MatchPasswordRule;
 
 /**
- * Class MatchPasswordRuleTest
- * @package Ludo237\Rules\Tests
  * @group Rules
  */
 class MatchPasswordRuleTest extends TestCase

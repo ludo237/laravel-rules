@@ -6,8 +6,7 @@ use Illuminate\Support\Facades\Date;
 use Ludo237\Rules\RequestNotExpiredRule;
 
 /**
- * Class RequestNotExpiredRuleTest
- * @package Ludo237\Rules\Tests
+ * @group Rules
  */
 class RequestNotExpiredRuleTest extends TestCase
 {
