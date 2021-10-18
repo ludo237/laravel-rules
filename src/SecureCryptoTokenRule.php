@@ -7,10 +7,10 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\Crypt;
 
 /**
- * Class SecureCryptoToken
+ * Class SecureCryptoTokenRule
  * @package Ludo237\Rules
  */
-class SecureCryptoToken implements Rule
+class SecureCryptoTokenRule implements Rule
 {
     private array $params;
     private string $glue;
